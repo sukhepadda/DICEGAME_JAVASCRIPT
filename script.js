@@ -17,7 +17,7 @@ const generate_num_btn_click = () => {
     document.querySelector("#sec-3").style.display = "none";
     document.querySelector("#inp_field").value = "";
     document.querySelector("#inp_field").focus();
-  }, 3000);
+  }, 2000);
 };
 
 // check no
@@ -28,10 +28,10 @@ const check_number = () => {
     alert("pls enter value between 1-6");
   } else {
     if (val == num) {
-      alert("winner!");
+      alert("winner Winner Chicken Dinner");
       generate_num_btn_click();
     } else {
-      alert("oooooooooo!.....");
+      alert("Oops! You Loose.....");
       generate_num_btn_click();
     }
   }
