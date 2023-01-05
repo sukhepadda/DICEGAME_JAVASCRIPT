@@ -1,8 +1,35 @@
 // console.log("testing")
-let number;
+let num;
 const generate_number = () =>{
-    let n1 = Math.floor(Math.random() * 6) + 1;
-    // console.log(n1);
+    num = Math.floor(Math.random() * 6) + 1;
+    console.log(num);
     
 }
-generate_number();
+
+const generate_num_btn_click = () =>{
+    document.querySelector('#sec-1').style.display = 'none';
+    document.querySelector('#sec-2').style.display = 'none';
+    document.querySelector('#sec-3').style.display = 'block';
+
+    setTimeout(() => {
+        generate_number();
+        document.querySelector('#inp_field').value = "";
+        document.querySelector('#sec-1').style.display = 'none';
+        document.querySelector('#sec-2').style.display = 'block';
+        document.querySelector('#sec-3').style.display = 'none';
+    }, 3000)
+}
+
+
+// check no
+
+const check_number = () =>{
+    let val = document.querySelector('#inp_field').value;
+    if(val == num){
+        alert("winner!");
+        generate_num_btn_click();
+    }else{
+        alert('oooooooooo!.....');
+        generate_num_btn_click();
+    }
+}
