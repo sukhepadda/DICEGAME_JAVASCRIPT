@@ -13,10 +13,11 @@ const generate_num_btn_click = () =>{
 
     setTimeout(() => {
         generate_number();
-        document.querySelector('#inp_field').value = "";
         document.querySelector('#sec-1').style.display = 'none';
         document.querySelector('#sec-2').style.display = 'block';
         document.querySelector('#sec-3').style.display = 'none';
+        document.querySelector('#inp_field').value = "";
+        document.querySelector('#inp_field').focus();
     }, 3000)
 }
 
